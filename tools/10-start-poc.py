@@ -250,7 +250,9 @@ def init_global_variables(steps_file_name="steps.json",session_file_name="sessio
     current_step = 0 # default start step 0
 
     # 1. Load Steps Definition from JSON file
-    steps_file_path = pathlib.Path(__file__).resolve().parent / 'steps.json'
+    #steps_file_name = 'steps.json'
+    steps_file_name = 'steps-4.20.json' # For OCP 4.20
+    steps_file_path = pathlib.Path(__file__).resolve().parent / steps_file_name
     raw_steps = load_steps_data(steps_file_path)
 
     # 2. Populate name and description using i18n()
